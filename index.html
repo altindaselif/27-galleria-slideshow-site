@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Galleria Slideshow Site</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <a class="header-logo-link" href="#"
+        ><img class="header-logo-img" src="images/shared/logo.svg" alt="Website Logo"
+      /></a>
+      <button class="header-button header-start-button">Start Slideshow</button>
+      <button class="header-button header-stop-button hidden">Stop Slideshow</button>
+      <button class="header-button header-return-button hidden">Return Gallery</button>
+    </header>
+    <main class="gallery-container">
+      <figure class="gallery-item" data-index="0">
+        <img class="gallery-img" src="images/starry-night/thumbnail.jpg" alt="Starry Night" loading="lazy" />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">Starry Night</span>
+          <span class="gallery-name">Vincent Van Gogh</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="1">
+        <img
+          class="gallery-img"
+          src="images/girl-with-pearl-earring/thumbnail.jpg"
+          alt="Girl with a Pearl Earring"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">Girl with a Pearl Earring</span>
+          <span class="gallery-name">Johannes Vermeer</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="2">
+        <img class="gallery-img" src="images/guernica/thumbnail.jpg" alt="Guernica" loading="lazy" />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">Guernica</span>
+          <span class="gallery-name">Pablo Picasso</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="3">
+        <img
+          class="gallery-img"
+          src="images/penitent-magdalene/thumbnail.jpg"
+          alt="Artemisia Gentileschi"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">Penitent Magdalene</span>
+          <span class="gallery-name">Artemisia Gentileschi</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="4">
+        <img
+          class="gallery-img"
+          src="images/the-storm-on-the-sea-of-galilee/thumbnail.jpg"
+          alt="The Storm on the Sea of Galilee"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">The Storm on the Sea of Galilee</span>
+          <span class="gallery-name">Rembrandt</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="5">
+        <img
+          class="gallery-img"
+          src="images/the-great-wave-off-kanagawa/thumbnail.jpg"
+          alt="The Great Wave off Kanagawa"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">The Great Wave off Kanagawa</span>
+          <span class="gallery-name">Hokusai</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="6">
+        <img
+          class="gallery-img"
+          src="images/van-gogh-self-portrait/thumbnail.jpg"
+          alt="Van Gogh Self-Portrait"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">Van Gogh Self-Portrait</span>
+          <span class="gallery-name">Vincent Van Gogh</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="7">
+        <img
+          class="gallery-img"
+          src="images/the-sleeping-gypsy/thumbnail.jpg"
+          alt="The Sleeping Gypsy"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">The Sleeping Gypsy</span>
+          <span class="gallery-name">Henri Rousseau</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="8">
+        <img
+          class="gallery-img"
+          src="images/lady-with-an-ermine/thumbnail.jpg"
+          alt="Lady with an Ermin"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">Lady with an Ermin</span>
+          <span class="gallery-name">Leonardo da Vinci</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="9">
+        <img class="gallery-img" src="images/the-night-cafe/thumbnail.jpg" alt="The Night Café" loading="lazy" />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">The Night Café</span>
+          <span class="gallery-name">Vincent Van Gogh</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="10">
+        <img class="gallery-img" src="images/mona-lisa/thumbnail.jpg" alt="Mona Lisa" loading="lazy" />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">Mona Lisa</span>
+          <span class="gallery-name">Leonardo da Vinci</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="11">
+        <img
+          class="gallery-img"
+          src="images/the-basket-of-apples/thumbnail.jpg"
+          alt="The Basket of Apples"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">The Basket of Apples</span>
+          <span class="gallery-name">Paul Cézanne</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="12">
+        <img
+          class="gallery-img"
+          src="images/the-boy-in-the-red-vest/thumbnail.jpg"
+          alt="The Boy in the Red Vest"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">The Boy in the Red Vest</span>
+          <span class="gallery-name">Edward Hopper</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="13">
+        <img
+          class="gallery-img"
+          src="images/arnolfini-portrait/thumbnail.jpg"
+          alt="Arnolfini Portrait"
+          loading="lazy"
+        />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">Arnolfini Portrait</span>
+          <span class="gallery-name">Jan van Eyck</span>
+        </figcaption>
+      </figure>
+      <figure class="gallery-item" data-index="14">
+        <img class="gallery-img" src="images/the-swing/thumbnail.jpg" alt="The Swing" loading="lazy" />
+        <figcaption class="gallery-info">
+          <span class="gallery-title">The Swing</span>
+          <span class="gallery-name">Jean-Honoré Fragonard</span>
+        </figcaption>
+      </figure>
+    </main>
+    <main class="slideshow-container hidden">
+      <div class="first-container">
+        <figure class="slideshow-image-container">
+          <img class="slideshow-img" src="images/starry-night/hero-large.jpg" alt="Starry Night" />
+
+          <button class="slideshow-view-img-button">
+            <img class="slideshow-view-img-icon" src="images/shared/icon-view-image.svg" alt="View" />
+            VIEW IMAGE
+          </button>
+        </figure>
+
+        <div class="slideshow-title-container">
+          <h1 class="slideshow-title">Starry Night</h1>
+          <h2 class="slideshow-name">Vincent Van Gogh</h2>
+        </div>
+
+        <img class="slideshow-painter-img" src="images/starry-night/artist.jpg" alt="Van Gogh" />
+      </div>
+
+      <div class="second-container">
+        <span class="slideshow-bg-year">1889</span>
+
+        <div class="slideshow-info-container">
+          <p class="slideshow-info-text">
+            Although The Starry Night was painted during the day in Van Gogh's ground-floor studio, it would be
+            inaccurate to state that the picture was painted from memory. The view has been identified as the one from
+            his bedroom window, facing east, a view which Van Gogh painted variations of no fewer than twenty-one times,
+            including The Starry Night. "Through the iron-barred window," he wrote to his brother, Theo, around 23 May
+            1889, "I can see an enclosed square of wheat ... above which, in the morning, I watch the sun rise in all
+            its glory."
+          </p>
+          <a class="slideshow-info-link" href="https://en.wikipedia.org/wiki/The_Starry_Night">Go to source</a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-container hidden">
+      <div class="footer-progress-container">
+        <div class="footer-progress-fill"></div>
+      </div>
+
+      <div class="footer-content-container">
+        <div class="footer-info-cotainer">
+          <p class="footer-title">Starry Night</p>
+          <p class="footer-name">Vincent Van Gogh</p>
+        </div>
+
+        <div class="footer-control-container">
+          <button class="footer-prev-button" aria-label="Previous Slide">
+            <img class="footer-prev-img" src="images/shared/icon-back-button.svg" alt="Back" />
+          </button>
+          <button class="footer-next-button" aria-label="Next Slide">
+            <img class="footer-next-img" src="images/shared/icon-next-button.svg" alt="Next" />
+          </button>
+        </div>
+      </div>
+    </footer>
+    <div class="lightbox-overlay hidden">
+      <div class="lightbox-container">
+        <button class="lightbox-close-button">Close</button>
+        <div class="lightbox-img-container">
+          <img class="lightbox-img" src="images/starry-night/gallery.jpg" alt="Full Screen View" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
