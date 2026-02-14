@@ -87,6 +87,18 @@ body {
   padding: var(--spacing-300) var(--spacing-500);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .header-container {
   border-bottom: 0.1rem solid var(--grey-150);
   padding-bottom: var(--spacing-300);
@@ -352,7 +364,7 @@ body {
   justify-content: space-between;
 }
 
-.footer-info-cotainer {
+.footer-info-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
@@ -646,7 +658,7 @@ body {
     padding: var(--spacing-200) 0;
   }
 
-  .footer-info-cotainer {
+  .footer-info-container {
     gap: 0;
   }
 

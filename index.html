@@ -18,14 +18,17 @@
     <title>Galleria Slideshow Site</title>
   </head>
   <body>
+    <h1 class="sr-only">Galleria Art Slideshow</h1>
+
     <header class="header-container">
-      <a class="header-logo-link" href="#"
-        ><img class="header-logo-img" src="images/shared/logo.svg" alt="Website Logo"
+      <a class="header-logo-link" href="#" aria-label="Galleria Home"
+        ><img class="header-logo-img" src="images/shared/logo.svg" alt="" aria-hidden="true"
       /></a>
-      <button class="header-button header-start-button">Start Slideshow</button>
-      <button class="header-button header-stop-button hidden">Stop Slideshow</button>
-      <button class="header-button header-return-button hidden">Return Gallery</button>
+      <button class="header-button header-start-button" type="button">Start Slideshow</button>
+      <button class="header-button header-stop-button hidden" type="button">Stop Slideshow</button>
+      <button class="header-button header-return-button hidden" type="button">Return Gallery</button>
     </header>
+
     <main class="gallery-container">
       <figure class="gallery-item" data-index="0">
         <img class="gallery-img" src="images/starry-night/thumbnail.jpg" alt="Starry Night" loading="lazy" />
@@ -183,13 +186,14 @@
         </figcaption>
       </figure>
     </main>
-    <main class="slideshow-container hidden">
+
+    <section class="slideshow-container hidden" aria-label="Slideshow View">
       <div class="first-container">
         <figure class="slideshow-image-container">
           <img class="slideshow-img" src="images/starry-night/hero-large.jpg" alt="Starry Night" />
 
-          <button class="slideshow-view-img-button">
-            <img class="slideshow-view-img-icon" src="images/shared/icon-view-image.svg" alt="View" />
+          <button class="slideshow-view-img-button" type="button">
+            <img class="slideshow-view-img-icon" src="images/shared/icon-view-image.svg" alt="" aria-hidden="true" />
             VIEW IMAGE
           </button>
         </figure>
@@ -214,27 +218,34 @@
             1889, "I can see an enclosed square of wheat ... above which, in the morning, I watch the sun rise in all
             its glory."
           </p>
-          <a class="slideshow-info-link" href="https://en.wikipedia.org/wiki/The_Starry_Night">Go to source</a>
+          <a
+            class="slideshow-info-link"
+            href="https://en.wikipedia.org/wiki/The_Starry_Night"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Go to Wikipedia source"
+            >Go to source</a
+          >
         </div>
       </div>
-    </main>
+    </section>
     <footer class="footer-container hidden">
       <div class="footer-progress-container">
         <div class="footer-progress-fill"></div>
       </div>
 
       <div class="footer-content-container">
-        <div class="footer-info-cotainer">
+        <div class="footer-info-container">
           <p class="footer-title">Starry Night</p>
           <p class="footer-name">Vincent Van Gogh</p>
         </div>
 
         <div class="footer-control-container">
-          <button class="footer-prev-button" aria-label="Previous Slide">
-            <img class="footer-prev-img" src="images/shared/icon-back-button.svg" alt="Back" />
+          <button class="footer-prev-button" type="button" aria-label="Previous Slide">
+            <img class="footer-prev-img" src="images/shared/icon-back-button.svg" alt="" aria-hidden="true" />
           </button>
-          <button class="footer-next-button" aria-label="Next Slide">
-            <img class="footer-next-img" src="images/shared/icon-next-button.svg" alt="Next" />
+          <button class="footer-next-button" type="button" aria-label="Next Slide">
+            <img class="footer-next-img" src="images/shared/icon-next-button.svg" alt="" aria-hidden="true" />
           </button>
         </div>
       </div>

@@ -163,6 +163,8 @@ const stopSlide = () => {
   toggleSlidePage();
   clearInterval(slideInterval);
 
+  slideInterval = null;
+
   updateHeaderButtons("gallery");
 };
 
@@ -199,11 +201,14 @@ const goToPrevSlide = () => {
 
 galleryItems.forEach((painting) => {
   painting.addEventListener("click", (e) => {
-    currentIndex = Number(e.currentTarget.dataset.index);
-    updateSlideUI();
-    toggleSlidePage();
+    const index = e.currentTarget.dataset.index;
+    if (index !== undefined) {
+      currentIndex = Number(index);
+      updateSlideUI();
+      toggleSlidePage();
 
-    updateHeaderButtons("manual");
+      updateHeaderButtons("manual");
+    }
   });
 });
 
